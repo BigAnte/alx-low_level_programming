@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*main - prints the alphabet in reverse
+/**
+ *main - Entry point
  *
  * Description: We are only allowed to use putchar
  * Return: 0
