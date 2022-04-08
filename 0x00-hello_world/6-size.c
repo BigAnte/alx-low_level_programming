@@ -1,30 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
+
+
 
 /**
  *
- *  *main - Prints the sizes of different variables in bytes
+ *  * main - prints the size of various types
  *
- *   *
+ *   * Return: 0 if exited properly, non-zero otherwise
  *
- *    *Return: 0
- *
- *     */
+ *    */
 
 int main(void)
 
 {
 
-		printf("Size of a char: %i byte(s)\n", sizeof(char));
+		printf("Size of a char: %d byte(s)\n", sizeof(char));
 
-			printf("Size of an int: %i byte(s)\n", sizeof(int));
+			printf("Size of an int: %d byte(s)\n", sizeof(int));
 
-				printf("Size of a long int: %i byte(s)\n", sizeof(long int));
+				printf("Size of a long int: %d byte(s)\n", sizeof(long int));
 
-					printf("Size of a long long int: %i byte(s)\n", sizeof(long long int));
+					printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
 
-						printf("Size of a float: %i byte(s)\n", sizeof(float));
-
-
+						printf("Size of a float: %d byte(s)\n", sizeof(float));
 
 							return (0);
 
