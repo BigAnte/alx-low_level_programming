@@ -1,6 +1,7 @@
  /* 
  * file - 0-positive_or_negative
  */
+
 #include <stdio.h>
 
 #include <stdlib.h>
@@ -17,6 +18,7 @@ int main(void)
 
 {	
 	int n;
+	
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
