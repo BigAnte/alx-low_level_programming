@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 /**
+ *  main - Entry point
  *
  * Description: Prints the alphabets in lowercase
  * Return: 0
