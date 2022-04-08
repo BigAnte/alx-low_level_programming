@@ -1,9 +1,6 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
  * *main - function begins
  *
  *
@@ -24,7 +21,5 @@ int main(void)
 
 
 	return (0);
-
-
 
 }
