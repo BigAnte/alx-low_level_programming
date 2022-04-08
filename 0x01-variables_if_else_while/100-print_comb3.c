@@ -1,32 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - prints 00-99
+ * main - main - A program that prints all possible different combinations of 2 digits
  *
- * Description: We can only use putchar function
+ * Description: Does not repeat digits
  * Return: 0
  */
 int main(void)
 {
-int n;
-int z;
-for (n = 0; n <= 9; n++)
+int i;
+int j;
+
+for (i = 48; i < 58; i++)
 {
-z = 0;
-for (z = 0; z <= 9; z++)
+for (j = i + 1; j < 58; j++)
 {
-putchar('0' + n);
-putchar('0' + z);
-if (n == 9 && z == 9)
+putchar(i);
+putchar(j);
+if ((i + j) < ('8' + '9'))
 {
-putchar('\n');
-}
-else
-{
-putchar(44);
+putchar(',');
 putchar(' ');
 }
 }
 }
-Return (0);
+putchar('\n');
+return (0);
 }
