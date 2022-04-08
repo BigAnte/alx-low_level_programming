@@ -1,11 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - prints 00-99
  *
  * Description: We can only use putchar function
  * Return: 0
  */
-
 int main(void)
 {
 int n;
@@ -22,7 +22,9 @@ if (n == 9 && z == 9)
 putchar('\n');
 }
 else
+{
 putchar(44);
+putchar(' ');
 }
 }
 }
