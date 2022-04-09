@@ -1,30 +1,40 @@
 #include <stdio.h>
 /**
- * main - Entery point
- *
- * Description:  prints all possible different combinations of three digits.
- * Return 0
+ * main - Entry point
+ * Description: prints all possible different combinations of two digits
+ * Return: 0
  */
 
 int main(void)
 {
-int digit1, digit2,digit3;
-for (digit1 = 0; digit1 < 8; digit1++)
+int c;
+int d;
+int e = 0;
+while (e < 10)
 {
-for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+d = 0;
+while (d < 10)
 {
-for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+c = 0;
+while (c < 10)
 {
-putchar((digit1 % 10) + '0');
-putchar((digit2 % 10) + '0');
-putchar((digit3 % 10) + '0');
-if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-continue;
-putchar(','); 
+if (c != d && d != e && e < d && d < c)
+{
+putchar('0' + e);
+putchar('0' + d);
+putchar('0' + c);
+if (c + d + e != 9 + 8 + 7)
+{
+putchar(',');
 putchar(' ');
 }
 }
+c++;
+}
+d++;
+}
+e++;
 }
 putchar('\n');
 return (0);
-}	
+}
