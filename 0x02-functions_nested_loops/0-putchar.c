@@ -1,7 +1,8 @@
+#include "main.h"
 /*
  * file - 0-putchar.c
  */
-#include "main.h"
+
 /**
  *main -To print putchar
  *
@@ -9,6 +10,7 @@
  */
 
 int main(void)
+
 {
 _putchar('_');
 _putchar('p');
