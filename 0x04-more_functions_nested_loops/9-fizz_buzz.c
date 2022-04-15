@@ -1,28 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - Prints the numbers from 1-100, but for multiples of three,
- * Return : Always 0
+ * main - prints nultplies of 3 or 5
+ *
+ * Description: multiples between 0 and 100
+ * Return: Always(0)
  */
 
 int main(void)
 {
-
-int num;
-for (num = 1; num <= 100; num++)
+int i;
+for (i = 1; i <= 99; i++)
 {
-if ((num % 3) == 0 && (num % 5) == 0)
-printf("FizzBuzz");
-else if ((num % 3) == 0)
-printf("Fizz");
-else if ((num % 5) == 0)
-printf("Buzz");
-else
-printf("%d", num);
-if (num == 100)
-continue;
-printf(" ");
+if (i % 15 == 0)
+{
+printf("FizzBuzz ");
 }
-printf("\n");
+else if (i % 3 == 0)
+{
+printf("Fizz ");
+}
+else if (i % 5 == 0)
+{
+printf("Buzz ");
+}
+else
+{
+printf("%i ", i);
+}
+}
+printf("Buzz\n");
 return (0);
 }
