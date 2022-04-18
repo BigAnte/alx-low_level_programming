@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- *Print_to - print to 98
- *Description - print to 98
- *@n : number to start
- *Return:0 or 1
- */
+ *Print_to_98 - Check Holberton
+ *@n : A input integer
+ *Description:prints all natural numbers from n to 98, followed by a new line.
+ *Return:Nothing
+*/
 
 void print_to_98(int n)
 {
