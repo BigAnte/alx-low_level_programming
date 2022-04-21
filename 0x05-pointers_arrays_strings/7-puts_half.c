@@ -1,24 +1,27 @@
-/*
- * File: 7-puts_half.c
- */
-
 #include "main.h"
 
 /**
- * puts_half - Prints half of a string.
- * @str: The string to be printed.
+ * puts_half - Prints half of a string
+ * @str: string to print
+ * Return: 0 (success)
  */
 
 void puts_half(char *str)
 {
-int index = 0, len = 0, n;
-while (str[index++])
+int i, len, l;
+len = 0;
+while (*(str + len) != '\0')
 len++;
-if ((len % 2) == 0)
-n = len / 2;
-else
-n = (len - 1) / 2;
-for (index = n; index < len; index++)
-_putchar(str[index]);
+l = len;
+len = len / 2;
+if (l % 2 != 0)
+{
+len++;
+}
+for (i = 0; i < l; i++)
+{
+if (i >= len)
+_putchar(*(str + i));
+}
 _putchar('\n');
 }
