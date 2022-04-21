@@ -1,16 +1,22 @@
 #include "main.h"
 
 /**
- * puts2 - Prints one char out of two of a string.
- * @str: The string containing characters.
+ * puts2 - print one char out of 2 of a string
+ * @str: string to print
+ * Return: Nothing
  */
 
 void puts2(char *str)
 {
-while (*str)
+int len;
+char l;
+for (len = 0; *(str + len) != 0; len++)
 {
-_putchar(*str);
-str += 2;
+if (len % 2 == 0)
+{
+l = *(str + len);
+_putchar(l);
+}
 }
 _putchar('\n');
 }
