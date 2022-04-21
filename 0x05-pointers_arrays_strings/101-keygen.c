@@ -1,59 +1,24 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 #include <time.h>
 
 /**
- * -crackme - generate random valid password
- *  @N:password number length
- *
- *  Return: Always 0;
+ * main - generates random passwords for 101-crackme
+ *  Return: zero
  */
 
-void random_passw_gen(int N)
+int main(void)
 {
-	srand((unsigned int)(time(NULL));
-	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[]= "!@#$^&*?";
-	char password[N];
+int sum;
+char c;
 
-	randomizer = rand() % 4;
-
-	for (i = 0; i < N; i++)
-	{
-	if (randomizer = 1)
-	{
-	password[i] = numbers[rand() % 10];
-	randomizer = rand() % 4;
-	printf("%c", password[i]);
-	}
-	else if (randomizer == 2)
-	{
-	password[i] = symbols[rand() % 8];
-	randomizer = rand() % 4;
-	printf("%c", password[i]);
-	}	 
-	else if (randomizer == 3)
-	{
-	password[i] = LETTER[rand() % 26];
-	randomizer = rand() % 4;
-	printf("%c", password[i]);
-	}
-	else
-	{
-	password[i] = letter[rand() % 26];
-	randomizer = rand() % 4;
-	printf("%c", password[i]);
-	}
-	}
-}
-
-int main ()
+srand(time(NULL));
+while (sum <= 2645)
 {
-	int N = 10;
-	random_passw_gen(N);
-	return (0);
+c = rand() % 128;
+sum += c;
+putchar(c);
 }
-
+putchar(2772 - sum);
+return (0);
+}
