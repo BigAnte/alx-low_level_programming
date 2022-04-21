@@ -3,10 +3,8 @@
 /**
  * print_rev - print string in reverse.
  * @s: string to be printed.
- *
  * Return Always 0.
  */
-
 void print_rev(char *s)
 {
 int len = 0, index;
