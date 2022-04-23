@@ -4,27 +4,26 @@
  * @dest: input parameter string
  * @src: input parameter string
  *
- * Return: dest
+ * Return: A pointer to the destination string @dest
  */
 char *_strcat(char *dest, char *src)
 {
-	int a;
-	int b;
-	a = 0;
 
-	while (dest[a] != 0)
+	char *start = dest;
+
+	while (*dest != '\0')
 	{
-		a++;
+		dest++;
 	}
 
-	b = 0;
-
-	while (src[b] != 0)
+	while (*src !='\0')
 	{
-		dest[a] = src[b];
-		a++;
-		b++;
+		*dest = *src;
+		dest++;
+		src++;
 	}
 
-	return (dest)
+	*dest ='\0';
+	return start;
+
 }
