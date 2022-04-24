@@ -1,34 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints all possible different combinations of three digits
- * Return: Always 0 (Success)
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
-
-int main(void)
+void print_number(int n)
 {
-	int n, m, l;
+	unsigned int m, d, count;
 
-	for (n = 48; n < 58; n++)
+	if (n < 0)
 	{
-		for (m = 49; m < 58; m++)
-		{
-			for (l = 50; l < 58; l++)
-			{
-				if (l > m && m > n)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
+		_putchar(45);
+		m = n * -1;
 	}
-	putchar('\n');
-	return (0);
+	else
+	{
+		m = n;
+	}
+
+	d = m;
+	count = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
+	}
 }
