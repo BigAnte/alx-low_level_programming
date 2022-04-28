@@ -19,7 +19,6 @@ int sqrt_a(int a, int b)
 	}
 	return (sqrt_a(a, b + 1));
 } 
-
 /**
  * _sqrt_recursion - main - check the code
  * @n: number
