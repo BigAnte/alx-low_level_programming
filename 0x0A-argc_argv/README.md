@@ -1,23 +1,31 @@
 0x0A. C - argc, argv
 
-General
+In this project, I learned about the two prototypes of main, the use of argument counter, argc and argument vector (array), argv, and how arguments are passed to a program. I alos learned when to use __attribute__((unused)) variable attribute.
 
-Allowed editors: vi, vim, emacs
 
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 
-All your files should end with a new line
+Tasks
 
-A README.md file, at the root of the folder of the project is mandatory
+0. It ain't what they call you, it's what you answer to
 
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+0-whatsmyname.c - a program that prints its name, followed by a new line.
 
-You are not allowed to use global variables
+1. Silence is argument carried out by other means
 
-No more than 5 functions per file
+1-args.c - a program that prints the number of arguments passed into it.
 
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
+2. The best argument against democracy is a five-minute conversation with the average voter
 
-Don’t forget to push your header file
+2-args.c - a program that prints all arguments it receives.
 
-You are allowed to use the standard library
+3. Neither irony nor sarcasm is argument
+
+3-mul.c - a program that multiplies two numbers.
+
+4. To infinity and beyond
+
+4-add.c - a program that adds positive numbers.
+
+5. Minimal Number of Coins for Change
+
+100-change.c - a program that prints the minimum number of coins to make change for an amount of money.
