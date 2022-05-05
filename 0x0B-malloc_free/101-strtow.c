@@ -52,7 +52,7 @@ char **strtow(char *str)
 				aout[i] = malloc((c - a1 + 2) * sizeof(char));
 				if (aout[i] == NULL)
 				{
-					ch_free_grid(aout, i);						
+					ch_free_grid(aout, i);
 					return (NULL);
 				}
 				break;
@@ -65,19 +65,3 @@ char **strtow(char *str)
 	aout[i] = NULL;
 	return (aout);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
