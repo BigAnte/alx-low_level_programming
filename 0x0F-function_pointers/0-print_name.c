@@ -1,14 +1,22 @@
 #include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * print_name - execute a function given as a parameter
- * @name: parameter that function ptr needs
- * @f:function to execute
- *
+ * print_name - prints a name as is
+ * @name: name of the person
+ * @f: is pointer
+ * Return: Nothing.
  */
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL && f != NULL)
-		f(name);
+	if (name == NULL || f == NULL)
+	{
+	return;
+	}
+	else
+	{
+	f(name);
+	}
 }
+
