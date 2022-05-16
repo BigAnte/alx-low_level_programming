@@ -12,15 +12,6 @@ void print_char(va_list ap)
 }
 
 /**
- * print_char - prints char
- * @ap: valist
- */
-void print_char(va_list ap)
-{
-	printf("%c", va_arg(ap, int));
-}
-
-/**
  * print_int - prints int
  * @ap: valist
  */
@@ -40,7 +31,7 @@ void print_float(va_list ap)
 
 /**
  * print_string - prints string
- *  @ap: valist
+ * @ap: valist
  */
 void print_string(va_list ap)
 {
@@ -57,8 +48,8 @@ void print_string(va_list ap)
 }
 
 /**
- * print_all - print varying input of ints, chars, floats, and strings
- * @format: an array of chars signifying which data type to print
+ *  print_all - print varying input of ints, chars, floats, and strings
+ *  @format: an array of chars signifying which data type to print
  */
 void print_all(const char * const format, ...)
 {
@@ -67,11 +58,10 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	datatype choice[] = { {'c', print_char},
-				{'i', print_int},
-				{'f', print_float},
-				{'s', print_string},
-				{'\0', NULL} };
-
+			      {'i', print_int},
+			      {'f', print_float},
+			      {'s', print_string},
+			      {'\0', NULL} };
 	/* iterate format; if datatype matched, access function via struct */
 	va_start(ap, format);
 	while (format != NULL && format[j] != '\0')
@@ -90,5 +80,11 @@ void print_all(const char * const format, ...)
 		j++;
 	}
 	va_end(ap);
-	printf("\n")
+	printf("\n");
 }
+
+
+
+
+
+
