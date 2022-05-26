@@ -16,6 +16,7 @@ void free_listp(listp_t **head)
 		curr = *head;
 		while ((temp = curr) != NULL)
 		{
+
 			curr = curr->next;
 			free(temp);
 		}
@@ -58,12 +59,12 @@ size_t print_listint_safe(const listint_t *head)
 				return (nnodes);
 			}
 		}
+
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		nnodes++;
 	}
 
-	printf("[%p] %d\n", (void *)head, head->n);
-	head = head->next;
-	nnodes++;
+	free_listp(&hptr);
+	return (nnodes);
 }
-
-free_listp(&hptr);
-return (nnodes);
