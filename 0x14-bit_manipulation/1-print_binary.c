@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
- * rint_binary - converts unsigned int to binary
+/**
+ * print_binary - converts unsigned int to binary
  * @n: unsigned int
  * Return: binary
  */
