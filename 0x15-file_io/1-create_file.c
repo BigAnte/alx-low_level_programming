@@ -23,7 +23,6 @@ int create_file(const char *filename, char *text_content)
 
 	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (!text_content) /* if no text to write, just create the file */
-
 	{
 		close(o);
 		return (1);
@@ -35,7 +34,7 @@ int create_file(const char *filename, char *text_content)
 		close(o);
 		return (-1);
 	}
-
 	close(o);
+
 	return (1);
 }
