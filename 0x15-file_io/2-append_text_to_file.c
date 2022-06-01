@@ -1,13 +1,13 @@
 #include "main.h"
-
 /**
  * append_text_to_file - append text to file, only if file exists.
  * @filename: A pointer to the name of the file to create.
  * @text_content: A pointer to a string to write to the file.
  *
  * Return: If the function fails - -1.
- * 	Otherwise - 1.
+ * Otherwise - 1.
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int o, w, len = 0;
@@ -32,7 +32,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	close(o);
-
 	return (1);
 }
 
