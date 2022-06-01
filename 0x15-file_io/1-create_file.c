@@ -1,43 +1,39 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * read_textfile - Reads a text file and prints it to POSIX stdout.
- * @filename: A pointer to the name of the file.
- * @letters: The number of letters the
- *           function should read and print.
+ * create_file - Creates a file.
+ * @filename: A pointer to the name of the file to create.
+ * @text_content: A pointer to a string to write to the file.
  *
- * Return: If the function fails or filename is NULL - 0.
- *         O/w - the actual number of bytes the function can read and print.
+ * Return: If the function fails - -1
+ * 	Otherwise - 1.
  */
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
-	ssize_t r, w;
-	int o;
-	char *buffer;
+	int o, w, len = 0;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-		return (0);
-
-	o = open(filename, O_RDONLY);
-	if (o == -1)
-		return (0);
-
-	r = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
-	if (r == -1 || w == -1)
+	if (text_content != NULL) /* get the string length */
 	{
-		free(buffer);
-		close(o);
-		return (0);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	if (!text_content) /* if no text to write, just create the file */
+	{
+		close(o);
+		return (1);
+	}
+
+	w = write(o, text_content, len);
+	if (o == -1 || w == -1)
+	{
+		close(o);
+		return (-1);
+	}
 	close(o);
-
-	return (r);
+	return (1);
 }
-
